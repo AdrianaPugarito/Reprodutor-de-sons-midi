@@ -1,8 +1,26 @@
-/*function tocaSomPom() {
-  document.querySelector('#som_tecla_pom').play();
+function tocaSom(idElementoAudio) {//função com parâmetro
+  document.querySelector(idElementoAudio).play();
 }
-document.querySelector('.tecla_pom').onclick = tocaSomPom; 
-para não repetir nosso codigo 9 vezes vamos a trabalhar com listas, automatizando elementos*/
 
 const listaDeTeclas = document.querySelectorAll('.tecla');
+
+let contador = 0;
+
+while (contador < listaDeTeclas.length) {
+
+  const tecla = listaDeTeclas[contador];
+  const instrumento = tecla.classList[1];
+  //template string
+  const idAudio = `#som_${instrumento}`; //texto dinâmico
+
+  console.log(idAudio);
+
+  tecla.onclick = function () { //função anônima 
+    tocaSom(idAudio);
+  }
+
+  contador = contador + 1;
+
+  console.log(contador);
+}
 
