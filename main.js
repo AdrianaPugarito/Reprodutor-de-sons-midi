@@ -58,7 +58,8 @@ for (let contador = 0; contador < listaDeTeclas.length; contador++) {
     if (evento.code === 'Enter') {
       tecla.classList.add('ativa');
     }*/
-    if (evento.code === 'Space' || evento.code === 'Enter'); { //space tecla do teclado
+    //fazendo nosso codigo mais limpo e generico
+    if (evento.code === 'Space' || evento.code === 'Enter'); {
       tecla.classList.add('ativa');
     }
   }
